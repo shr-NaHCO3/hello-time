@@ -1,21 +1,96 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title></title>
   </head>
   <body>
-    <table>
-      <tr>
-        <td>123</td>
-        <td>136</td>
-      </tr>
-    </table>
-    <table>
-      <tr>
-        <td>1232</td>
-        <td>1362</td>
-      </tr>
-    </table>
+    <ol class="rootol">
+      <li class="title">标题标题标题</li>
+      <li class="task">
+        <div class="rootTask">
+          <input type="checkbox" class="finishBox">
+          <p class="taskTitle">root汉字汉字汉字</p>
+          <p class="taskValue">rootval汉字汉字汉字</p>
+        </div>
+        <ol class="subol">
+          <li>
+            <div class="subtask">
+              <input type="checkbox" class="finishBox">
+              <p class="taskTitle">root汉字汉字汉字</p>
+              <p class="taskValue">rootval汉字汉字汉字</p>
+            </div>
+          </li>
+          <li>
+            <div class="subtask">
+              <input type="checkbox" class="finishBox">
+              <p class="taskTitle">root汉字汉字汉字</p>
+              <p class="taskValue">rootval汉字汉字汉字</p>
+            </div>
+          </li>
+        </ol>
+      </li>
+    </ol>
   </body>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+    }
+    
+    body {
+      background-color: #252525;
+    }
+    
+    .rootol {
+      list-style-type: none;
+      padding: 20px;
+      border-radius: 5px;
+      border: 2px solid #444444;
+    }
+    .subol {
+      list-style-type: none;
+      border-radius: 5px;
+      border: 2px solid #444444;
+    }
+    .subol li {
+      border-bottom: 2px solid #444444;
+    }
+    .subol li .subtask {
+      margin: 10px;
+    }
+    
+    .rootTask .finishBox {
+      position: relative;
+      top: 45px;
+    }
+    .rootTask .taskTitle {
+      font-size: 30px;
+      color: #ffffff;
+      margin-left: 30px;
+    }
+    .rootTask .taskValue {
+      font-size: 20px;
+      color: #bbbbbb;
+      margin-top: -5px;
+      margin-left: 30px;
+    }
+    
+    .subtask .taskTitle {
+      font-size: 20px;
+      color: #ffffff;
+      margin-left: 20px;
+      margin-top: -25px;
+    }
+    .subtask .taskValue {
+      font-size: 15px;
+      color: #bbbbbb;
+      margin-left: 20px;
+    }
+    .subtask .finishBox {
+      position: relative;
+      top: 10px;
+    }
+  </style>
 </html>

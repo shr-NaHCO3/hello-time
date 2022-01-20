@@ -1,2 +1,1 @@
-# hello-time
-hello, time!
+# hello, time!
